@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+}
+
+@layer components {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.12) 2px, transparent 2px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.12) 2px, transparent 2px);
+    background-size: 120px 120px;
+    background-position: 0 0, 0 118px;
+  }
+
+  /* Shared horizontal padding + max-width used by every section. */
+  .container-page {
+    @apply mx-auto w-full max-w-container px-6 md:px-10;
+  }
+}
